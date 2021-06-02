@@ -109,7 +109,7 @@
         goalMessage : {
           target_pose : {
             header : {
-              frame_id : 'mape'
+              frame_id : 'map'
             },
             pose : pose
           }
@@ -224,7 +224,7 @@
             var currentPosVec3 = new ROSLIB.Vector3(currentPos);
   
             orientationMarker = new ROS2D.NavigationArrow({
-              size : 100,
+              size : 25,
               strokeSize : 1,
               fillColor : createjs.Graphics.getRGB(0, 255, 0, 0.66),
               pulse : false
@@ -325,7 +325,7 @@
     var that = this;
     options = options || {};
     this.ros = options.ros;
-    var topic = options.topic || 'map';
+    var topic = options.topic || '/map';
     var continuous = options.continuous;
     this.serverName = options.serverName || '/move_base';
     this.actionName = options.actionName || 'move_base_msgs/MoveBaseAction';
