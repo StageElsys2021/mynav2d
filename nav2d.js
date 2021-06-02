@@ -103,6 +103,7 @@
      */
     function sendGoal(pose) {
       // create a goal
+      
       var goal = new ROSLIB.Goal({
         actionClient : actionClient,
         goalMessage : {
@@ -114,6 +115,8 @@
           }
         }
       });
+      console.log("insendgoal");
+      //console.log("insendgoal");
       goal.send();
   
       // create a marker for the goal
@@ -221,7 +224,7 @@
             var currentPosVec3 = new ROSLIB.Vector3(currentPos);
   
             orientationMarker = new ROS2D.NavigationArrow({
-              size : 25,
+              size : 100,
               strokeSize : 1,
               fillColor : createjs.Graphics.getRGB(0, 255, 0, 0.66),
               pulse : false
