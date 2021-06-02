@@ -108,7 +108,7 @@
         goalMessage : {
           target_pose : {
             header : {
-              frame_id : 'map'
+              frame_id : 'mape'
             },
             pose : pose
           }
@@ -322,7 +322,7 @@
     var that = this;
     options = options || {};
     this.ros = options.ros;
-    var topic = options.topic || '/map';
+    var topic = options.topic || 'map';
     var continuous = options.continuous;
     this.serverName = options.serverName || '/move_base';
     this.actionName = options.actionName || 'move_base_msgs/MoveBaseAction';
